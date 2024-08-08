@@ -51,6 +51,11 @@ a {
   text-align: justify;
 }
 
+.post-content ul {
+  list-style: circle;
+  margin: 1em 0;
+}
+
 .post-content a {
   text-decoration: underline;
   font-weight: bold;
