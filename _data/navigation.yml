@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: All Songs
+  link: /all-songs/
+- name: Song Submissions
+  link: /form/
+- name: About
+  link: /about/

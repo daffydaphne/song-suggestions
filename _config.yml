@@ -1,0 +1,6 @@
+title: Song Suggestions
+description: >
+  A sort of blong thingy to share music and thoughts
+baseurl: "/song-suggestions"
+url: "https://daffydaphne.github.io"
+permalink: /:title/

@@ -1,0 +1,158 @@
+html {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #eeeeee;
+  color: #1e1e1e;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 16px;
+}
+
+header,
+main {
+  margin-bottom: 24px;
+}
+
+nav {
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.index-intro {
+  margin-bottom: 32px;
+}
+
+.post-content {
+  text-align: justify;
+}
+
+#formIFrame {
+  height: 720px;
+  /* width: 360px; */
+  width: 100%;
+  border: none;
+}
+
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.song-card {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 210px; */
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+}
+
+.song-card > * {
+  width: 100%;
+  flex: 1;
+}
+
+.song-card > h2 {
+  margin: 0 0 8px;
+  font-size: 1.5em;
+}
+
+.song-card > h3 {
+  margin: 0 0 10px;
+  color: #6e6e6e;
+  font-size: 1.2em;
+  font-style: normal;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.music-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+/* 
+.music-links .center {
+  margin: 0 auto;
+} */
+
+.song-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border-radius: 6px;
+  padding: 0.5em 0;
+}
+
+.song-link:hover {
+  opacity: 0.7;
+}
+
+.platform-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-bottom: 2px;
+}
+
+.platform-name {
+  font-size: 12px;
+  margin: 0;
+}
+
+.spotify {
+  /* background-color: #1db954; */
+  background-color: #2ecc71; /* Softer Spotify Green */
+}
+
+.apple-music {
+  /* background-color: #fa57c1; */
+  background-color: #ff85c0; /* Softer Apple Music Pink */
+}
+
+.youtube-music {
+  /* background-color: #ff0000; */
+  background-color: #ff6f61; /* Softer YouTube Music Coral */
+}
+
+/* footer,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

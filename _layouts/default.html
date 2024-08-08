@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song Suggestions - {{ page.title }}</title>
+    <link
+      rel="shortcut icon"
+      href="{{site.baseurl}}/assets/images/daff.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>{% include navigation.html %}</header>
+      <main>{{ content }}</main>
+      <footer><p>DaffyDaphne 2024</p></footer>
+    </div>
+  </body>
+</html>

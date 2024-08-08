@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+---
+
+<h1>Song suggestions</h1>
+<div class="index-intro">
+  <p>
+    Above there's a link for a page with a bunch of songs you can listen to and
+    also a link with a form if you want to submit your own things. Below will be
+    a list of the current posts, click their title to go to the full post page.
+  </p>
+
+  <p>
+    There's not much functionality or good design choices here yet, but soon :)
+  </p>
+</div>
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <h2><a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></h2>
+    {{ post.excerpt}}
+  </li>
+  {% endfor %}
+</ul>

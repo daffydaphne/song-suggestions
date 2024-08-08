@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<h1 class="post-title">{{ page.title}}</h1>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+
+<div class="post-content">{{ content }}</div>
+{% comment %}
+<a href="{{site.baseurl}}{{page.next.url}}"> {{page.next.title}} </a>
+<a href="{{site.baseurl}}{{page.previous.url}}">{{page.previous.title}}</a> {%
+endcomment %}
