@@ -1,6 +1,6 @@
 ---
 layout: default
-title: - Submit Your Songs
+title: Submit Your Songs
 ---
 
 # Want to Submit some songs?
