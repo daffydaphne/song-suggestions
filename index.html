@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-<h1>Song suggestions</h1>
 <div class="index-intro">
   <p>
     Above there's a link for a page with a bunch of songs you can listen to and
@@ -12,15 +11,59 @@ title: Home
   </p>
 
   <p>
-    There's not much functionality or good design choices here yet, but soon :)
+    There's not much functionality yet so enjoy the mouse drawn images for now
+    c:
   </p>
 </div>
 
-<ul>
+<ul class="posts-list">
   {% for post in site.posts %}
-  <li>
-    <h2><a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></h2>
-    {{ post.excerpt}}
+  <li
+    class="post-card {% if post.tag == 'vibes' %}vibes{% elsif post.tag == 'albums and bands' %}albums{% else %}misc{% endif %}"
+  >
+    <a class="title-link" href="{{ site.baseurl }}{{post.url}}">
+      <h2>{{post.title}}</h2>
+    </a>
+    <img
+      class="post-image"
+      src="{{site.baseurl}}/assets/images/{{post.image}}.webp"
+      alt="Post Image"
+    />
+    {{ post.excerpt }}
+    <a class="read-more" href="{{ site.baseurl }}{{post.url}}">
+      Read More...
+    </a>
   </li>
   {% endfor %}
 </ul>
+
+<script>
+  async function getAlbumCoverImage(albumId) {
+    // Construct the oEmbed URL for the specified album ID
+    const oEmbedUrl = `https://embed.spotify.com/oembed/?url=spotify:album:${albumId}`;
+
+    try {
+      // Fetch the oEmbed data
+      const response = await fetch(oEmbedUrl);
+
+      // Check if the response is OK (status code 200)
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      // Parse the JSON response
+      const data = await response.json();
+
+      // Extract the thumbnail URL (album cover image)
+      const coverImageUrl = data.thumbnail_url;
+
+      // Log the cover image URL to the console
+      console.log("Album Cover Image URL:", coverImageUrl);
+
+      // Return the cover image URL
+      return coverImageUrl;
+    } catch (error) {
+      console.error("Error fetching album cover image:", error);
+    }
+  }
+</script>

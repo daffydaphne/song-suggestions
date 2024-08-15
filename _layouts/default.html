@@ -13,9 +13,29 @@
   </head>
   <body>
     <div class="container">
-      <header>{% include navigation.html %}</header>
+      <header>
+        <div class="header-top">
+          <a href="{{site.baseurl}}/"><h1 class="logo">Song suggestions</h1></a>
+
+          <div id="toggler" class="mobile-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        {% include navigation.html %}
+      </header>
       <main>{{ content }}</main>
       <footer><p>DaffyDaphne 2024</p></footer>
     </div>
+    <script>
+      var toggler = document.getElementById("toggler");
+
+      toggler.addEventListener("click", toggleVisible);
+      function toggleVisible() {
+        document.querySelector("nav").classList.toggle("hidden");
+        toggler.classList.toggle("toggled");
+      }
+    </script>
   </body>
 </html>

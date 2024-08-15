@@ -1,13 +1,8 @@
-<!-- <nav>
-  <a href="{{ site.baseurl }}">Home</a>
-  <a href="{{site.baseurl}}/about">About</a>
-</nav> -->
-
-<nav class="navbar">
+<nav id="nav" class="hidden">
   <ul class="nav-list">
     {% for item in site.data.navigation %}
-      <li>
-      <a href="{{ site.baseurl }}{{ item.link }}" {% if page.url ==  item.link %}style="color:red"{% endif %}>
+      <li class="nav-item">
+      <a href="{{ site.baseurl }}{{ item.link }}" {% if page.url ==  item.link %} class="selected" {% endif %}>
         {{ item.name }}
         </a>
         </li>

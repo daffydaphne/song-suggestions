@@ -2,11 +2,19 @@
 layout: default
 ---
 
-<h1 class="post-title">{{ page.title}}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<div class="post-wrapper {{page.tag |  split: ' ' | first}}">
+  <div class="post-info">
+    <h2 class="post-title">{{ page.title}}</h2>
+    <p style="text-transform: capitalize">
+      <span class="tag {{page.tag |  split: ' ' | first}}">{{page.tag }}</span>
+      | {{ page.date | date_to_string }} | {{ page.author }}
+    </p>
+  </div>
 
-<div class="post-content">{{ content }}</div>
-{% comment %}
-<a href="{{site.baseurl}}{{page.next.url}}"> {{page.next.title}} </a>
-<a href="{{site.baseurl}}{{page.previous.url}}">{{page.previous.title}}</a> {%
-endcomment %}
+  <div class="post-content">{{ content }}</div>
+</div>
+
+<div class="links-other-posts">
+  <a href="{{site.baseurl}}{{page.next.url}}"> {{page.next.title}} </a>
+  <a href="{{site.baseurl}}{{page.previous.url}}">{{page.previous.title}}</a>
+</div>
